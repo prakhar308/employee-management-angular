@@ -12,7 +12,7 @@
          </div>
       </div>
 
-      <loader *ngIf="employees.length == 0"></loader>
+      <loader *ngIf="!employees"></loader>
 
       <div class="table-responsive">
          <table class="table" *ngIf="employees.length!==0">
