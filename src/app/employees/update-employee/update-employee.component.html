@@ -1,0 +1,45 @@
+<div class="card">
+   
+   <div class="card-header">
+      Update Employee
+   </div>
+
+   <div class="card-body">
+      <form #updateForm="ngForm" class="col-md-6" ngNativeValidate
+         *ngIf="employee" (ngSubmit)="update(updateForm.value)">
+         
+         <div class="form-group">
+            <label for="fname">FirstName</label>
+            <input [(ngModel)]="employee.firstName" class="form-control" name="firstName"
+                   type="text" id="fname" required>
+         </div>      
+         
+         <div class="form-group">
+            <label for="lname">LastName</label>
+            <input [(ngModel)]="employee.lastName" class="form-control" name="lastName"
+                   type="text" id="lname" required>
+         </div>
+
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input [(ngModel)]="employee.email" class="form-control" type="email"
+                   email name="email" id="email" required>
+         </div>
+
+         <div class="form-group">
+            <label for="salary">Salary</label>
+            <input [(ngModel)]="employee.salary" class="form-control" name="salary"
+                   type="number" id="salary" required>
+         </div>
+         
+         <div class="form-group">
+            <label for="phone">Phone</label>
+            <input [(ngModel)]="employee.phone" class="form-control" name="phone"
+                   type="number" id="phone" required>
+         </div>
+
+         <button [disabled]="updateForm.invalid" class="btn btn-success" type="submit">Update</button>
+      </form>      
+   </div>
+
+</div>

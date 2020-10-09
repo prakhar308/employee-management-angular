@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+   background-color: rgb(21, 32, 43);
+   color: white;
+}
+
+div.card-header {
+   font-size: xx-large;
+}
+
+div.card {
+   margin-top: 50px;
+   background-color: rgb(56, 68, 77);
+}
+  
+.table {
+   margin-top: 10px;
+   color: white;
+}
+
+thead {
+   color: rgba(29,161,242,1.00);
+}

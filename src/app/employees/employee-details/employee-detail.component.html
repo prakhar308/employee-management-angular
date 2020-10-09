@@ -1,0 +1,27 @@
+<div class="card">
+   
+   <div class="card-header">
+      Employee Details
+   </div>
+
+   <div *ngIf="employee" class="card-body">
+      <div>
+         <b>First Name: </b> {{ employee.firstName }}
+         <br>
+         <b>Last Name: </b> {{ employee.lastName }}
+         <br>
+         <b>Email: </b> {{ employee.email }}
+         <br>
+         <b>Salary: </b> {{ employee.salary }}
+         <br>
+         <b>Phone: </b> {{ employee.phone }}
+         <br>
+      </div>
+   </div>
+
+   <div *ngIf="employee" class="card-footer">
+      <button [routerLink]="['/employees']" 
+         class="btn btn-primary">Back to employee List</button>
+   </div>
+
+</div>

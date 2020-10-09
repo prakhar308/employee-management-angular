@@ -1,27 +1,43 @@
-# EmployeeManagement
+# EmployeeManagement - CRUD Operations in Angular
+
+The project doesn't require a data server. It relies on the [Angular in-memory-web-api](#https://github.com/angular/in-memory-web-api/blob/master/README.md) which replaces the HttpClient module's HttpBackend. The replacement service simulates the behavior of a REST-like backend.
+
+**Routes**
+```
+GET      - /employees      - all employees
+GET      - /employees/:2   - employee with id 2
+POST     - /employees      - add new employee
+PUT      - /employees      - update the employee using the id passed in the object
+DELETE   - /employees/:2   - delete employee with id 2
+```
+
+**Employee Model**
+
+```js
+{
+   id: 1,
+   firstName: 'John',
+   lastName: 'Doe',
+   email: 'john@yahoo.com',
+   salary: 50000,
+   phone: 9874563211
+}
+```
+
+**Quick Start**
+```bash
+# Get the latest snapshot
+git clone https://github.com/prakhar308/employee-management-angular.git
+
+# Change directory
+cd employee-management-angular
+
+# Install dependencies
+npm install
+
+# Serve on localhost
+npm start
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,0 +1,47 @@
+<div class="card">
+
+   <div class="card-header">
+      Employee List
+   </div>
+
+   <div class="card-body">
+
+      <div class="row">
+         <div class="col-md-4">
+            <button class="btn btn-primary" [routerLink]="['/employees/add']">Add New Employee</button>
+         </div>
+      </div>
+
+      <div class="table-responsive">
+         <table class="table" *ngIf="employees.length!==0">
+            <thead>
+               <tr>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let employee of employees">
+                  <td>{{ employee.firstName }}</td>
+                  <td>{{ employee.lastName }}</td>
+                  <td>{{ employee.email }}</td>
+                  <td>
+                     <button class="btn btn-danger" 
+                           (click)="delete(employee.id)">
+                        Delete</button>
+                     <button [routerLink]="['/employees/update', employee.id]"
+                           class="btn btn-primary">
+                        Update</button>
+                     <button [routerLink]="['/employees/', employee.id]"
+                           class="btn btn-primary">
+                        Details</button>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+
+</div>
