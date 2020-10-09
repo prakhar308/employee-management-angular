@@ -4,6 +4,8 @@
       Employee Details
    </div>
 
+   <loader *ngIf="!employee"></loader>
+
    <div *ngIf="employee" class="card-body">
       <div>
          <b>First Name: </b> {{ employee.firstName }}

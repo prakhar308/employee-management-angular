@@ -10,11 +10,12 @@ import { appRoutes } from "./routes";
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { UpdateEmployeeComponent } from "./employees/update-employee/update-employee.component";
 import { AddEmployeeComponent } from "./employees/add-employee/add-employee.component";
+import { EmployeeDetailComponent } from './employees/employee-details/employee-detail.component';
+import { LoaderComponent } from "./shared/Loader/loader.component";
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { EmployeeDetailComponent } from './employees/employee-details/employee-detail.component';
 
 @NgModule({
    declarations: [
@@ -22,7 +23,8 @@ import { EmployeeDetailComponent } from './employees/employee-details/employee-d
       EmployeeListComponent,
       UpdateEmployeeComponent,
       AddEmployeeComponent,
-      EmployeeDetailComponent
+      EmployeeDetailComponent,
+      LoaderComponent,
    ],
    imports: [
       BrowserModule,

@@ -5,6 +5,9 @@
    </div>
 
    <div class="card-body">
+
+      <loader *ngIf="!employee"></loader>
+
       <form #updateForm="ngForm" class="col-md-6" ngNativeValidate
          *ngIf="employee" (ngSubmit)="update(updateForm.value)">
          

@@ -12,6 +12,8 @@
          </div>
       </div>
 
+      <loader *ngIf="employees.length == 0"></loader>
+
       <div class="table-responsive">
          <table class="table" *ngIf="employees.length!==0">
             <thead>
