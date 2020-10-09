@@ -15,7 +15,7 @@ import { ToastrService } from "../../shared/toastr.service";
 })
 export class EmployeeListComponent implements OnInit {
 
-   employees: IEmployee[] = [];
+   employees: IEmployee[];
 
    constructor(
       private employeeService: EmployeeService,
