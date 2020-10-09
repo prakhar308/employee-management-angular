@@ -1,6 +1,6 @@
 # EmployeeManagement - CRUD Operations in Angular
 
-The project doesn't require a data server. It relies on the [Angular in-memory-web-api](#https://github.com/angular/in-memory-web-api/blob/master/README.md) which replaces the HttpClient module's HttpBackend. The replacement service simulates the behavior of a REST-like backend.
+The project doesn't require a data server. It relies on the [Angular in-memory-web-api](https://github.com/angular/in-memory-web-api/blob/master/README.md) which replaces the HttpClient module's HttpBackend. The replacement service simulates the behavior of a REST-like backend.
 
 **Routes**
 ```
