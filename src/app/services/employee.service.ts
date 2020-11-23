@@ -3,7 +3,7 @@ import { Observable, throwError } from "rxjs";
 import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
 import { catchError } from "rxjs/operators";
 
-import { IEmployee } from "./employee.model";
+import { IEmployee } from "../employees/employee.model";
 
 const httpOptions = {
    headers: new HttpHeaders({
@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class EmployeeService {
 
-   private empoyeeUrl = "api/employees";
+   private empoyeeUrl = "http://localhost:5000/api/employees";
 
    constructor(private http: HttpClient) { }
 
@@ -46,8 +46,9 @@ export class EmployeeService {
    }
 
    // PUT - update an employee
-   updateEmployee(update: IEmployee): Observable<IEmployee> {
-      return this.http.put<IEmployee>(this.empoyeeUrl, update, httpOptions)
+   updateEmployee(id: number, update: IEmployee): Observable<IEmployee> {
+      const url = `${this.empoyeeUrl}/${id}`;
+      return this.http.put<IEmployee>(url, update, httpOptions)
          .pipe(
             catchError(this.handleError)
          );

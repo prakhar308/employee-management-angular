@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+.navbar-bg {
+   background-color: rgb(56, 68, 77);
+}
+
 body {
    background-color: rgb(21, 32, 43);
    color: white;
+}
+
+.modal-content {
+   color: black;
 }
 
 div.card-header {

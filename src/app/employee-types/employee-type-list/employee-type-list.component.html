@@ -1,0 +1,22 @@
+<div class="card">
+   
+   <div class="card-header">
+      Employee Types
+   </div>   
+
+   <div class="card-body">
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Types</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let et of employeeTypes">
+               <td>{{ et.type }}</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IEmployee } from '../employee.model';
-import { EmployeeService } from '../employee.service';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
    templateUrl: './employee-detail.component.html'

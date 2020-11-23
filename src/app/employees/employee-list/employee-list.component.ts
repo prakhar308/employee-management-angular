@@ -2,7 +2,7 @@ import { toBase64String } from '@angular/compiler/src/output/source_map';
 import { Component, OnInit } from '@angular/core';
 import { IEmployee } from '../employee.model';
 
-import { EmployeeService } from "../employee.service";
+import { EmployeeService } from "../../services/employee.service";
 import { ToastrService } from "../../shared/toastr.service";
 
 @Component({
@@ -16,6 +16,7 @@ import { ToastrService } from "../../shared/toastr.service";
 export class EmployeeListComponent implements OnInit {
 
    employees: IEmployee[];
+   detailedEmployee: IEmployee;
 
    constructor(
       private employeeService: EmployeeService,
@@ -40,4 +41,12 @@ export class EmployeeListComponent implements OnInit {
             this.toastr.success("Deleted successfully");
          })
    }
+
+   getDetails(id: number) {
+      this.employeeService
+         .getEmployee(id)
+         .subscribe(employee => this.detailedEmployee = employee);
+   }
+
+   public keepOriginalOrder = (a, b) => a.key;
 }

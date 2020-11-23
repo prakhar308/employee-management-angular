@@ -1,0 +1,71 @@
+<div class="card">
+   
+   <div class="card-header">
+      Employee Form
+   </div>
+
+   <div class="card-body">
+
+      <!-- <loader *ngIf="!employee"></loader> -->
+
+      <form #employeeForm="ngForm" class="col-md-6" ngNativeValidate
+      *ngIf="employee" (ngSubmit)="onSubmit(employeeForm.value)">
+         
+         <div class="form-group">
+            <label for="fname">FirstName</label>
+            <input [(ngModel)]="employee.firstName" class="form-control" name="firstName"
+                   type="text" id="fname" required>
+         </div>      
+         
+         <div class="form-group">
+            <label for="lname">LastName</label>
+            <input [(ngModel)]="employee.lastName" class="form-control" name="lastName"
+                   type="text" id="lname" required>
+         </div>
+
+         <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" [(ngModel)]="employee.gender" name="gender" id="gender" required>
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input [(ngModel)]="employee.email" class="form-control" type="email"
+                   email name="email" id="email" required>
+         </div>
+
+         <div class="form-group">
+            <label for="dob">Date Of Birth</label>
+            <input class="form-control" type="date" [(ngModel)]="employee.dob" name="dob" required>
+         </div>
+
+         <div class="form-group">
+            <label for="phone">Phone</label>
+            <input [(ngModel)]="employee.phone" class="form-control" name="phone"
+                   type="text" id="phone" required>
+         </div>
+
+         <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea class="form-control" [(ngModel)]="employee.bio" name="bio" id="bio" cols="10" rows="5" required></textarea>   
+         </div>
+
+         <div class="form-group">
+            <label for="type">Employee Type</label>
+            <select class="form-control" [(ngModel)]="employee.employeeTypeId" name="EmployeeTypeId" id="type" required>
+               <option *ngFor="let type of employeeTypes" [value]="type.id">
+                  {{ type.type }}
+               </option>
+               <!-- <option value="1">Permanent</option>
+               <option value="2">COntract</option> -->
+            </select>
+         </div>
+
+         <button [disabled]="employeeForm.invalid" class="btn btn-success" type="submit">Submit</button>
+      </form>      
+   </div>
+
+</div>

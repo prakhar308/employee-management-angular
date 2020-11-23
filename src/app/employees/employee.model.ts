@@ -2,7 +2,10 @@ export interface IEmployee {
    id: number;
    firstName: string;
    lastName: string;
+   gender?: string;
    email: string;
-   salary: number;
-   phone: number;
+   dob?: Date;
+   phone?: string;
+   bio?: string;
+   employeeTypeId?: number;
 }

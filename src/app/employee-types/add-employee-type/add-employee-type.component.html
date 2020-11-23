@@ -1,0 +1,20 @@
+<div class="card">
+
+   <div class="card-header">
+      Add New Employee Type
+   </div>
+
+   <div class="card-body">
+      <form class="col-md-6" #addForm="ngForm" ngNativeValidate
+            (ngSubmit)="onSubmit(addForm.value)">
+
+         <div class="form-group">
+            <label for="type"></label>
+            <input class="form-control" type="text" ngModel name="type" id="type" required>
+         </div>
+
+         <button [disabled]="addForm.invalid" class="btn btn-success" type="submit">Submit</button>
+      </form>
+   </div>
+
+</div>
