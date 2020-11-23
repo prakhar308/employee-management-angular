@@ -1,29 +1,5 @@
 # EmployeeManagement - CRUD Operations in Angular
 
-The project doesn't require a data server. It relies on the [Angular in-memory-web-api](https://github.com/angular/in-memory-web-api/blob/master/README.md) which replaces the HttpClient module's HttpBackend. The replacement service simulates the behavior of a REST-like backend.
-
-**Routes**
-```
-GET      - /employees      - all employees
-GET      - /employees/:2   - employee with id 2
-POST     - /employees      - add new employee
-PUT      - /employees      - update the employee using the id passed in the object
-DELETE   - /employees/:2   - delete employee with id 2
-```
-
-**Employee Model**
-
-```js
-{
-   id: 1,
-   firstName: 'John',
-   lastName: 'Doe',
-   email: 'john@yahoo.com',
-   salary: 50000,
-   phone: 9874563211
-}
-```
-
 **Quick Start**
 ```bash
 # Get the latest snapshot
