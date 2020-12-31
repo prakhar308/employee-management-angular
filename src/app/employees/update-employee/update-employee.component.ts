@@ -37,6 +37,7 @@ export class UpdateEmployeeComponent implements OnInit{
          .getEmployee(id)
          .subscribe(employee => {
             this.employee = employee;
+            this.employee.dob = this.employee.dob.toString().split('T')[0];
          })
    }
 

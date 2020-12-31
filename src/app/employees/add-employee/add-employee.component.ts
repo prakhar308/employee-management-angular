@@ -21,7 +21,10 @@ export class AddEmployeeComponent implements OnInit{
       dob: null,
       phone: "",
       bio: "",
-      employeeTypeId: null
+      employeeType: {
+         id: null,
+         type: ""
+      }
    }
    employeeTypes: IEmployeeType[];
 

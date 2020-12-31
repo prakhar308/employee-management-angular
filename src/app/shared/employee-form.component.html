@@ -55,7 +55,7 @@
 
          <div class="form-group">
             <label for="type">Employee Type</label>
-            <select class="form-control" [(ngModel)]="employee.employeeTypeId" name="EmployeeTypeId" id="type" required>
+            <select class="form-control" [(ngModel)]="employee.employeeType.id" name="EmployeeTypeId" id="type" required>
                <option *ngFor="let type of employeeTypes" [value]="type.id">
                   {{ type.type }}
                </option>

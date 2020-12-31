@@ -4,8 +4,11 @@ export interface IEmployee {
    lastName: string;
    gender?: string;
    email: string;
-   dob?: Date;
+   dob?: string;
    phone?: string;
    bio?: string;
-   employeeTypeId?: number;
+   employeeType: {
+      id: number,
+      type: string
+   };
 }

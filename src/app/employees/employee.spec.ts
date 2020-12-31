@@ -1,4 +1,6 @@
-import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { defer, of } from 'rxjs';
 import { EmployeeService } from '../services/employee.service';
 import { EmployeeListComponent } from "./employee-list/employee-list.component";
 import { IEmployee } from "./employee.model";
@@ -41,7 +43,15 @@ describe("Employee Services", () => {
 
    beforeEach(() => {
       mockHttp = jasmine.createSpyObj("mockHttp", ['get']);
-      employeeService = new EmployeeService(mockHttp);
+      // employeeService = new EmployeeService(mockHttp);
+      TestBed.configureTestingModule({
+         providers: [
+            EmployeeService,
+            { provide: HttpClient, useValue: mockHttp }
+         ],
+      });
+      mockHttp = TestBed.inject(HttpClient);
+      employeeService = TestBed.inject(EmployeeService);
    })
 
    it("should return expected employees", () => {
